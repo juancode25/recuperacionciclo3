@@ -41,7 +41,7 @@ export default {
   },
   // Este es el hook que utilizamos para cargar las películas al momento de ingresar al sitio web
   // Al parecer no es el correcto y la información no carga
-  mounted() {
+  created() {
     axios
       .get("http://www.omdbapi.com/?s=harry+potter&type=movie&apikey=23daade9")
       .then((response) => {
@@ -50,3 +50,11 @@ export default {
       });
   },
 };
+</script>
+
+<style scoped>
+
+image{
+  max-width: 150px;
+}
+</style>
